@@ -23,6 +23,7 @@
 (data/mid/etl.data存储格式与gy_contest_link_traveltime_training_data.txt 相同)
 
 昕元: 遍历每个时间片进行topo维度数据清洗（一段时间片观察其topo通行时间合理性）
+
 润冶: 遍历每条link进行时间维度数据清洗（一条links观察全段时间通行时间合理性）
 
 ***
@@ -51,7 +52,9 @@
 3.2 evaluate:
 
 输入: 1.data/mid/model 2.data/origin/gy_contest_link_info.txt
+
 输出(最后预测数据＋五月份8:00-10:00的MAPE值): data/res/output.data ＋ double(后台输出)
+
 ***
 
 
