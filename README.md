@@ -13,7 +13,7 @@
 
 ***
 
-1. etl
+1. etl(昕元 润冶)
 
 1.1异常travel_time过滤(考虑最近道路与最近时间)
 
@@ -22,9 +22,12 @@
 输出: data/mid/etl.data
 (data/mid/etl.data存储格式与gy_contest_link_traveltime_training_data.txt 相同)
 
+昕元: 遍历每个时间片进行topo维度数据清洗（一段时间片观察其topo通行时间合理性）
+润冶: 遍历每条link进行时间维度数据清洗（一条links观察全段时间通行时间合理性）
+
 ***
 
-2. feat
+2. feat(明慧 慧强)
 
 2.1时间特征
 2.2道路特征
@@ -38,23 +41,19 @@
 
 ***
 
-3. train_evaluate
+3. train_eval(腾飞 泽军)
 
-3.1每个links训练两个XGBmodel并调参数(一个为5月份特征数据训练出的model(用于评估)一个为全数据训练的model)
+3.1 train:每个links训练两个XGBmodel并调参数(一个为5月份特征数据训练出的model(用于评估)一个为全数据训练的model)
 
 输入：data/mid/feats
 输出：data/mid/model/[linkid].model, data/mid/model/evaluate_[linkid].model
 
-***
-
-4. evalute
-
-4.1
+3.2 evaluate:
 
 输入: 1.data/mid/model 2.data/origin/gy_contest_link_info.txt
 输出(最后预测数据＋五月份8:00-10:00的MAPE值): data/res/output.data ＋ double(后台输出)
-
 ***
+
 
 
 
